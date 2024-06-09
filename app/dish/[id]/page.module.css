@@ -1,0 +1,21 @@
+#dish img {
+  float: right;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+#dish > div > p {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 685px) {
+  #dish {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #dish img {
+    margin: 1rem 0;
+    max-width: 90%;
+  }
+}
