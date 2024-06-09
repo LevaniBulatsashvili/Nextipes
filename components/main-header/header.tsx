@@ -1,12 +1,12 @@
-import styles from "./header.module.css";
+import classes from "./header.module.css";
 import Link from "next/link";
 
 const ISLOGGEDIN = false;
 
 export default function Header() {
   return (
-    <header id={styles["main-header"]}>
-      <div id={styles.logo}>
+    <header id={classes["main-header"]}>
+      <div id={classes.logo}>
         <Link href="/">Nextipe</Link>
       </div>
       <nav>
