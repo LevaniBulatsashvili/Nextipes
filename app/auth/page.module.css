@@ -1,0 +1,57 @@
+#auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 5rem auto;
+  padding: 1rem 0 2rem 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2468ddd6, #a1782bd6);
+  max-width: 30rem;
+  min-height: 30rem;
+}
+
+#auth > div {
+  display: flex;
+  flex-direction: column;
+}
+#auth > div label {
+  margin: 3px 0;
+  font-weight: 600;
+  color: black;
+}
+
+#auth > div input {
+  background: linear-gradient(90deg, #bac5d9d6, #6998e9d6);
+}
+
+#auth > button {
+  font-family: "Cinzel", serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0a31f6d6;
+  color: #dcd4d2;
+  margin: auto 0 1rem 0;
+  text-decoration: none;
+}
+
+#auth > button:hover {
+  background-color: #0000fbd6;
+}
+
+#auth img {
+  mix-blend-mode: multiply;
+}
+
+#auth > p a {
+  font-weight: 700;
+  color: #1212d1d6;
+  text-decoration: none;
+}
+
+#auth > p a:hover {
+  color: #0000ffd6;
+}

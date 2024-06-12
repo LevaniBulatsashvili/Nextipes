@@ -29,11 +29,23 @@
 #main-header ul a {
   text-decoration: none;
   color: #ede1e1;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+}
+
+#main-header ul button {
+  font-family: "Cinzel", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: #ede1e1;
 }
 
 #main-header ul a:hover,
 #main-header ul a.active {
+  color: #E3430E;
+}
+
+#main-header ul button:hover{
   color: #E3430E;
 }

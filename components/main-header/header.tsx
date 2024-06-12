@@ -1,9 +1,10 @@
+import { verifyAuth } from "@/lib/auth";
 import classes from "./header.module.css";
 import Link from "next/link";
+import { logout } from "@/app/actions/auth-actions";
 
-const ISLOGGEDIN = false;
-
-export default function Header() {
+export default async function Header() {
+  const isLoggedIn = await verifyAuth();
   return (
     <header id={classes["main-header"]}>
       <div id={classes.logo}>
@@ -11,15 +12,19 @@ export default function Header() {
       </div>
       <nav>
         <ul>
-          {ISLOGGEDIN && (
+          {isLoggedIn && (
             <li>
               <Link href="/">My Recipes</Link>
             </li>
           )}
           <li>
-            <Link href={ISLOGGEDIN ? "/logout" : "/login"}>
-              {ISLOGGEDIN ? "Login" : "Logout"}
-            </Link>
+            {!isLoggedIn && <Link href="/auth?mode=login">login</Link>}
+
+            {isLoggedIn && (
+              <form action={logout}>
+                <button>Logout</button>
+              </form>
+            )}
           </li>
         </ul>
       </nav>
