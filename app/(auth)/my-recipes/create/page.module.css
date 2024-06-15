@@ -1,0 +1,58 @@
+#recipe-create * {
+  border: none;
+  outline: none;
+  color: #dcd4d2;
+}
+
+#recipe-create {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#recipe-create > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  text-decoration: none;
+}
+
+#recipe-create input {
+  background-color: #372f27;
+  border-radius: 5px;
+  padding: 5px;
+  
+}
+
+#recipe-create textarea {
+    background-color: #372f27;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+#image-upload {
+    place-self: flex-end;
+    cursor: pointer;
+    background-color: #0f4300;
+    padding: 0.4rem;
+    margin-right: 5rem;
+}
+
+#image-upload:hover {
+    background-color: #112e09;
+}
+
+#recipe-create input[type="file"] {
+  display: none;
+}
+
+#recipe-create  button {
+  margin-left: 5rem;
+  padding: 0.5rem 1rem;
+  background-color: #372f27;
+}
+
+#recipe-create  button:hover {
+  background-color: #574b40;
+}

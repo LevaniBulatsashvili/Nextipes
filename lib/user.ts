@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import db from "./db";
 
 export function createUser(email: string, password: string) {
@@ -5,9 +6,12 @@ export function createUser(email: string, password: string) {
     .prepare("INSERT INTO users (email, password) VALUES (?, ?)")
     .run(email, password);
 
+  cookies().set("userId", result.lastInsertRowid);
   return result.lastInsertRowid;
 }
 
 export function getUser(email: string) {
-  return db.prepare("SELECT * FROM users WHERE email = ?").get(email);
+  const user = db.prepare("SELECT * FROM users WHERE email = ?").get(email);
+  cookies().set("userId", user.id);
+  return user;
 }

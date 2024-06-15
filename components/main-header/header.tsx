@@ -1,7 +1,7 @@
 import { verifyAuth } from "@/lib/auth";
 import classes from "./header.module.css";
 import Link from "next/link";
-import { logout } from "@/app/actions/auth-actions";
+import { logout } from "@/actions/auth-actions";
 
 export default async function Header() {
   const isLoggedIn = await verifyAuth();
@@ -14,7 +14,7 @@ export default async function Header() {
         <ul>
           {isLoggedIn && (
             <li>
-              <Link href="/">My Recipes</Link>
+              <Link href="/my-recipes/view">My Recipes</Link>
             </li>
           )}
           <li>

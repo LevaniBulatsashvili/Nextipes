@@ -6,35 +6,3 @@
   grid-gap: 4rem;
   margin: 2rem auto;
 }
-
-#recipes li {
-  max-width: 27rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #24201c;
-}
-
-#recipes > li > div > * {
-  margin: 0.5rem 0;
-}
-
-#recipes > li > a{
-  font-family: "Cinzel", serif;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-  background-color: #E3430E;
-  color: #dcd4d2;
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  text-decoration: none;
-}
-
-#recipes > li > a:hover{
-  background-color: #f94d03;
-}

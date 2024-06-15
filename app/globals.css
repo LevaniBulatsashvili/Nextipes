@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 * {
+  font-family: "Cinzel", serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0px;
+  color: #dcd4d2;
 }
 
 html {
@@ -13,6 +15,21 @@ html {
 body {
   background-color: #161514;
   color: #ede1e1;
+}
+
+button,
+a {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 #page {
@@ -25,4 +42,14 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #574b40;
 }

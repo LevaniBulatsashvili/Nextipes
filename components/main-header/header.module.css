@@ -5,15 +5,8 @@
   margin-bottom: 2rem;
 }
 
-#logo {
-  font-family: "Cinzel", sans-serif;
+#logo > a {
   font-size: 1.5rem;
-  cursor: pointer;
-}
-
-#main-header #logo a {
-  color: #ede1e1;
-  text-decoration: none;
 }
 
 #main-header #logo a:hover {
@@ -26,19 +19,10 @@
   font-weight: bold;
 }
 
-#main-header ul a {
-  text-decoration: none;
-  color: #ede1e1;
-}
-
 #main-header ul button {
-  font-family: "Cinzel", sans-serif;
-  cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
   background: none;
-  border: none;
-  color: #ede1e1;
 }
 
 #main-header ul a:hover,

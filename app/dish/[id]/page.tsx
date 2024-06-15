@@ -25,7 +25,7 @@ export default function Recipe({ params }: searchParams) {
       <div>
         <h1>{recipe.title}</h1>
         {instructions.map((instruction) => (
-          <p>{instruction}</p>
+          <p key={instruction}>{instruction}</p>
         ))}
       </div>
     </main>

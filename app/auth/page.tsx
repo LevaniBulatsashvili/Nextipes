@@ -4,7 +4,7 @@ import classes from "./page.module.css";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "../actions/auth-actions";
+import { auth } from "../../actions/auth-actions";
 import { useFormState } from "react-dom";
 
 export default function Auth() {

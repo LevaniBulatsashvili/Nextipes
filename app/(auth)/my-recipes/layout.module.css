@@ -1,0 +1,22 @@
+#user-recipes {
+    min-height: 35rem;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #24201c;
+}
+
+#user-navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-navigation > a {
+    margin: 1rem 1rem 0 auto;
+    padding: 0.5rem 1rem;
+    align-self: flex-end;
+    background-color: #372f27;
+}
+
+#user-navigation > a:hover {
+    background-color: #574b40;
+}

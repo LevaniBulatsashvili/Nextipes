@@ -26,16 +26,10 @@
 }
 
 #auth > button {
-  font-family: "Cinzel", serif;
-  cursor: pointer;
-  border: none;
   border-radius: 5px;
-  font-size: 1rem;
   padding: 0.5rem 1rem;
   background-color: #0a31f6d6;
-  color: #dcd4d2;
   margin: auto 0 1rem 0;
-  text-decoration: none;
 }
 
 #auth > button:hover {
@@ -49,7 +43,6 @@
 #auth > p a {
   font-weight: 700;
   color: #1212d1d6;
-  text-decoration: none;
 }
 
 #auth > p a:hover {
