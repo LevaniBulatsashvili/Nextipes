@@ -22,6 +22,7 @@
 }
 
 #auth > div input {
+  outline: none;
   background: linear-gradient(90deg, #bac5d9d6, #6998e9d6);
 }
 
