@@ -7,7 +7,7 @@
 #recipe-create {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
 }
 
 #recipe-create > div {
@@ -21,38 +21,42 @@
   background-color: #372f27;
   border-radius: 5px;
   padding: 5px;
-  
 }
 
 #recipe-create textarea {
-    background-color: #372f27;
-    border-radius: 5px;
-    padding: 5px;
-    resize: none;
+  background-color: #372f27;
+  border-radius: 5px;
+  padding: 5px;
+  resize: none;
 }
 
 #image-upload {
-    place-self: flex-end;
-    cursor: pointer;
-    background-color: #0f4300;
-    padding: 0.4rem;
-    margin-right: 5rem;
+  place-self: flex-end;
+  cursor: pointer;
+  background-color: #0f4300;
+  padding: 0.4rem;
+  margin-right: 5rem;
 }
 
 #image-upload:hover {
-    background-color: #112e09;
+  background-color: #112e09;
 }
 
 #recipe-create input[type="file"] {
   display: none;
 }
 
-#recipe-create  button {
-  margin-left: 5rem;
+#recipe-create button {
   padding: 0.5rem 1rem;
   background-color: #372f27;
 }
 
-#recipe-create  button:hover {
+#recipe-create button:hover {
   background-color: #574b40;
+}
+
+#recipe-create > .error {
+  font-weight: 600;
+  color: rgb(196, 25, 25);
+  margin-bottom: 0.3rem;
 }

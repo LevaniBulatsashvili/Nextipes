@@ -4,10 +4,11 @@ import { createRecipeAction } from "@/actions/recipes-actions";
 import { useFormState } from "react-dom";
 
 export default function CreateRecipe() {
-  const [formState, formAction] = useFormState(
-    (prevState, formData) => createRecipeAction(prevState, formData),
-    {}
-  );
+  const [formState, formAction]: [{ message: string }[], fn: any] =
+    useFormState(
+      (prevState, formData) => createRecipeAction(prevState, formData),
+      []
+    );
 
   return (
     <form id={classes["recipe-create"]} action={formAction}>
@@ -33,6 +34,12 @@ export default function CreateRecipe() {
       <div>
         <button>Submit</button>
       </div>
+      {formState.length > 0 &&
+        formState.map((error) => (
+          <p className={classes.error} key={error.message}>
+            {error.message}
+          </p>
+        ))}
     </form>
   );
 }

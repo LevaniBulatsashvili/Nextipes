@@ -11,3 +11,12 @@ export function passwordIsValid(password: string) {
 export function passwordsMatch(password: string, confirmPassword: string) {
   return password === confirmPassword;
 }
+
+export function inputNotEmpty(text: string) {
+  return text.trim().length;
+}
+
+// TODO
+export function imageIsValid(image: string) {
+  return image.trim().length;
+}

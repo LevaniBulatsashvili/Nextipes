@@ -1,29 +1,29 @@
-#recipe-create * {
+#recipe-edit * {
   border: none;
   outline: none;
   color: #dcd4d2;
 }
 
-#recipe-create {
+#recipe-edit {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
 }
 
-#recipe-create > div {
+#recipe-edit > div {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
   text-decoration: none;
 }
 
-#recipe-create input {
+#recipe-edit input {
   background-color: #372f27;
   border-radius: 5px;
   padding: 5px;
 }
 
-#recipe-create textarea {
+#recipe-edit textarea {
   background-color: #372f27;
   border-radius: 5px;
   padding: 5px;
@@ -42,16 +42,21 @@
   background-color: #112e09;
 }
 
-#recipe-create input[type="file"] {
+#recipe-edit input[type="file"] {
   display: none;
 }
 
-#recipe-create button {
-  margin-left: 5rem;
+#recipe-edit button {
   padding: 0.5rem 1rem;
   background-color: #372f27;
 }
 
-#recipe-create button:hover {
+#recipe-edit button:hover {
   background-color: #574b40;
+}
+
+#recipe-edit > .error {
+  font-weight: 600;
+  color: rgb(196, 25, 25);
+  margin-bottom: 0.3rem;
 }
