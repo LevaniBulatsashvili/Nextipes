@@ -53,3 +53,42 @@ ul {
   border-radius: 10px;
   background-color: #574b40;
 }
+
+#not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 35rem;
+  border-radius: 5px;
+  gap: 3rem;
+  background-color: rgb(37, 35, 32);
+}
+
+#not-found > h1 {
+  font-size: 6rem;
+}
+
+#not-found > p {
+  text-align: center;
+}
+
+#error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 35rem;
+  border-radius: 5px;
+  gap: 3rem;
+  background-color: rgb(61, 18, 18);
+}
+
+#error > h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#error > p {
+  text-align: center;
+}
