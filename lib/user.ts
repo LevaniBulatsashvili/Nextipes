@@ -12,6 +12,5 @@ export function createUser(email: string, password: string) {
 
 export function getUser(email: string) {
   const user = db.prepare("SELECT * FROM users WHERE email = ?").get(email);
-  cookies().set("userId", user.id);
   return user;
 }

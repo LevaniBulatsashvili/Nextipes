@@ -30,7 +30,7 @@
   border-radius: 5px;
   padding: 0.5rem 1rem;
   background-color: #0a31f6d6;
-  margin: auto 0 1rem 0;
+  margin: 1rem 0;
 }
 
 #auth > button:hover {
@@ -48,4 +48,10 @@
 
 #auth > p a:hover {
   color: #0000ffd6;
+}
+
+.error {
+  font-weight: 600;
+  color: rgb(196, 25, 25);
+  margin: 0.3rem 0;
 }

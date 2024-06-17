@@ -9,10 +9,11 @@ import { useFormState } from "react-dom";
 
 export default function Auth() {
   const mode = useSearchParams().get("mode") || "register";
-  const [formState, formAction] = useFormState(
-    (prevState, formData) => auth(mode, prevState, formData),
-    {}
-  );
+  const [formState, formAction]: [{ message: string }[], fn: any] =
+    useFormState(
+      (prevState: any, formData: any) => auth(mode, prevState, formData),
+      []
+    );
   const register = mode === "register";
   return (
     <form id={classes.auth} action={formAction}>
@@ -48,6 +49,12 @@ export default function Auth() {
           {register ? "Have an account?" : "Create an account"}
         </Link>
       </p>
+      {formState.length > 0 &&
+        formState.map((error) => (
+          <p className={classes.error} key={error.message}>
+            {error.message}
+          </p>
+        ))}
     </form>
   );
 }
