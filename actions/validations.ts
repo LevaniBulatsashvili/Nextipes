@@ -5,7 +5,7 @@ export function emailIsValid(email: string) {
 }
 
 export function passwordIsValid(password: string) {
-  return password.length < 6;
+  return password.trim().length < 6;
 }
 
 export function passwordsMatch(password: string, confirmPassword: string) {
