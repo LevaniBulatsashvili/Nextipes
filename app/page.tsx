@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <ul id={classes.recipes}>
         {recipes.map((recipe) => (
-          <RecipeCard recipe={recipe} />
+          <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </ul>
     </main>
