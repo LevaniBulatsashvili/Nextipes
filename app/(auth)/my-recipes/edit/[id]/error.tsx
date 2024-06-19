@@ -1,5 +1,5 @@
 "use client";
-import classes from "./page.module.css"
+import classes from "../../error.module.css";
 
 export default function Error() {
   return (

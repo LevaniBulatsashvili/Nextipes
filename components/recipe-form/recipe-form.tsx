@@ -1,38 +1,29 @@
-"use client";
+import { FormError } from "@/interface/form";
+import classes from "./recipe-form.module.css";
 import { RecipeInterface } from "@/interface/recipe";
-import classes from "./edit-form.module.css";
-import { useFormState } from "react-dom";
-import { editRecipeAction } from "@/actions/recipes-actions";
 
-export default function EditRecipeForm({
-  recipe,
+export default function RecipeForm({
+  formState,
+  formAction,
+  title,
+  description,
+  instructions,
 }: {
-  recipe: RecipeInterface;
+  formState: FormError[];
+  formAction: (payload: FormData) => void;
+  title: string;
+  description: string;
+  instructions: string;
 }) {
-  const [formState, formAction]: [{ message: string }[], fn: any] =
-    useFormState(
-      (prevState, formData) => editRecipeAction(recipe.id, prevState, formData),
-      {}
-    );
-
   return (
-    <form id={classes["recipe-edit"]} action={formAction}>
+    <form id={classes["recipe-form"]} action={formAction}>
       <div>
         <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          defaultValue={recipe.title}
-        />
+        <input type="text" id="title" name="title" defaultValue={title} />
       </div>
       <div>
         <label htmlFor="description">Description</label>
-        <input
-          id="description"
-          name="description"
-          defaultValue={recipe.description}
-        />
+        <input id="description" name="description" defaultValue={description} />
       </div>
       <div>
         <label htmlFor="instructions">Instructions</label>
@@ -40,7 +31,7 @@ export default function EditRecipeForm({
           id="instructions"
           name="instructions"
           rows={5}
-          defaultValue={recipe.instructions}
+          defaultValue={instructions}
         />
       </div>
       <div>

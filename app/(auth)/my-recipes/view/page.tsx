@@ -5,8 +5,13 @@ import { RecipeInterface } from "@/interface/recipe";
 import Image from "next/image";
 import Link from "next/link";
 import ViewDeleteForm from "@/components/view/view-delete-form";
+import { verifyAuth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-export default function ViewRecipes() {
+export default async function ViewRecipes() { 
+  const result = await verifyAuth();
+  if (!result.user) return redirect("/");
+
   const user = cookies().get("userId")?.value;
   const recipes: RecipeInterface[] = getUserRecipes(+user!);
   return (

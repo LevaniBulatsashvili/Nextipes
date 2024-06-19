@@ -4,7 +4,7 @@ import Link from "next/link";
 import { logout } from "@/actions/auth-actions";
 
 export default async function Header() {
-  const isLoggedIn = await verifyAuth();
+  const { user } = await verifyAuth();
   return (
     <header id={classes["main-header"]}>
       <div id={classes.logo}>
@@ -12,15 +12,15 @@ export default async function Header() {
       </div>
       <nav>
         <ul>
-          {isLoggedIn && (
+          {user && (
             <li>
               <Link href="/my-recipes/view">My Recipes</Link>
             </li>
           )}
           <li>
-            {!isLoggedIn && <Link href="/auth?mode=login">login</Link>}
+            {!user && <Link href="/auth?mode=login">login</Link>}
 
-            {isLoggedIn && (
+            {user && (
               <form action={logout}>
                 <button>Logout</button>
               </form>

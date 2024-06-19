@@ -26,7 +26,7 @@ export async function createSession(id: string) {
 export async function verifyAuth() {
   const cookie = cookies().get(lucia.sessionCookieName);
 
-  if (!cookie || !cookie.value) return null;
+  if (!cookie || !cookie.value) return { session: null, user: null };
 
   const result = await lucia.validateSession(cookie.value);
 

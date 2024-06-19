@@ -51,22 +51,3 @@
 #recipe-card #view-tag:hover {
   background-color: #f94d03;
 }
-
-#error {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 28rem;
-  border-radius: 5px;
-  gap: 3rem;
-}
-
-#error > h1 {
-  font-size: 3rem;
-  text-align: center;
-}
-
-#error > p {
-  text-align: center;
-}
