@@ -16,7 +16,7 @@ async function register(
   if (!emailIsValid(email)) errors.push({ message: "email is invalid." });
   if (!passwordIsValid(password))
     errors.push({ message: "password must be atleast 6 characters long." });
-  if (passwordsMatch(password, confirmPassword))
+  if (!passwordsMatch(password, confirmPassword))
     errors.push({ message: "passwords don't match." });
   if (errors.length) return errors;
 

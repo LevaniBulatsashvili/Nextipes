@@ -5,7 +5,7 @@ export function emailIsValid(email: string) {
 }
 
 export function passwordIsValid(password: string) {
-  return password.trim().length < 6;
+  return password.trim().length > 5;
 }
 
 export function passwordsMatch(password: string, confirmPassword: string) {
@@ -13,10 +13,10 @@ export function passwordsMatch(password: string, confirmPassword: string) {
 }
 
 export function inputNotEmpty(text: string) {
-  return text.trim().length;
+  return text.trim().length > 0;
 }
 
 // TODO
 export function imageIsValid(image: string) {
-  return image.trim().length;
+  return image.trim().length > 0;
 }
