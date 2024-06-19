@@ -6,14 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { auth } from "../../actions/auth-actions";
 import { useFormState } from "react-dom";
+import { FormError } from "@/interface/form";
 
 export default function Auth() {
   const mode = useSearchParams().get("mode") || "register";
-  const [formState, formAction]: [{ message: string }[], fn: any] =
-    useFormState(
-      (prevState: any, formData: any) => auth(mode, prevState, formData),
-      []
-    );
+  const [formState, formAction] = useFormState(
+    (prevState: FormError[], formData: FormData) =>
+      auth(mode, prevState, formData),
+    []
+  );
   const register = mode === "register";
   return (
     <form id={classes.auth} action={formAction}>

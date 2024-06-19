@@ -6,12 +6,15 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { imageIsValid, inputNotEmpty } from "./validations";
 
-export async function createRecipeAction(prevState: Object, formData: any) {
+export async function createRecipeAction(
+  prevState: Object,
+  formData: FormData
+) {
   const errors = [];
-  const title = formData.get("title");
+  const title = formData.get("title") as string;
   const image = "/foods.png";
-  const description = formData.get("description");
-  const instructions = formData.get("instructions");
+  const description = formData.get("description") as string;
+  const instructions = formData.get("instructions") as string;
   const userId = +cookies().get("userId")?.value!;
 
   if (!inputNotEmpty(title)) errors.push({ message: "title is empty." });
@@ -31,13 +34,13 @@ export async function createRecipeAction(prevState: Object, formData: any) {
 export async function editRecipeAction(
   id: number,
   prevState: Object,
-  formData: any
+  formData: FormData
 ) {
   const errors = [];
-  const title = formData.get("title");
+  const title = formData.get("title") as string;
   const image = "/foods.png";
-  const description = formData.get("description");
-  const instructions = formData.get("instructions");
+  const description = formData.get("description") as string;
+  const instructions = formData.get("instructions") as string;
 
   if (!inputNotEmpty(title)) errors.push({ message: "title is empty." });
   if (!imageIsValid(image))

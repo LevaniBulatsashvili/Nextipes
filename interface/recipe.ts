@@ -5,3 +5,9 @@ export interface RecipeInterface {
   description: string;
   instructions: string;
 }
+
+export interface RecipeSearchParams {
+  params: {
+    id: string;
+  };
+}

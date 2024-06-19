@@ -43,10 +43,14 @@ async function login(email: string, password: string) {
   redirect("/");
 }
 
-export async function auth(mode: string, prevState: Object, formData: any) {
-  const email = formData.get("email");
-  const password = formData.get("password");
-  const confirmPassword = formData.get("confirm-password");
+export async function auth(
+  mode: string,
+  prevState: Object,
+  formData: FormData
+) {
+  const email = formData.get("email") as string;
+  const password = formData.get("password") as string;
+  const confirmPassword = formData.get("confirm-password") as string;
 
   if (mode === "register") return register(email, password, confirmPassword);
   return login(email, password);

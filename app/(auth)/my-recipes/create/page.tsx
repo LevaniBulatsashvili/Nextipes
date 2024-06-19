@@ -1,14 +1,15 @@
 "use client";
 import classes from "./page.module.css";
 import { createRecipeAction } from "@/actions/recipes-actions";
+import { FormError } from "@/interface/form";
 import { useFormState } from "react-dom";
 
 export default function CreateRecipe() {
-  const [formState, formAction]: [{ message: string }[], fn: any] =
-    useFormState(
-      (prevState, formData) => createRecipeAction(prevState, formData),
-      []
-    );
+  const [formState, formAction] = useFormState(
+    (prevState: FormError[], formData: FormData) =>
+      createRecipeAction(prevState, formData),
+    []
+  );
 
   return (
     <form id={classes["recipe-create"]} action={formAction}>
