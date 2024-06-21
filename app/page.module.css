@@ -6,3 +6,9 @@
   grid-gap: 4rem;
   margin: 2rem auto;
 }
+
+@media only screen and (max-width: 480px) {
+  #recipes {
+    grid-template-columns: repeat(auto-fill, minmax(85vw, 1fr));
+  }
+}

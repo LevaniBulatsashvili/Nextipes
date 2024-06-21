@@ -11,7 +11,7 @@ export default function ViewDeleteForm({ id }: { id: number }) {
 
   return (
     <form id={classes["delete-form"]} action={formAction}>
-      <button>Delete Recipe</button>
+      <button>Delete <span>Recipe</span></button>
     </form>
   );
 }

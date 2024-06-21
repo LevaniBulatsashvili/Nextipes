@@ -1,9 +1,25 @@
 #delete-form > button {
   font-size: 1rem;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   background-color: #e3190e;
 }
 
 #delete-form > button:hover {
     background-color: #ff1104;
+}
+
+@media only screen and (max-width: 660px) {
+  #delete-form > button {
+    padding: 0.3rem 0.8rem;
+  }
+  #delete-form > button > span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #delete-form > button {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.3rem;
+  }
 }

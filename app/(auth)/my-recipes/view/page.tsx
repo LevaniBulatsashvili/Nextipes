@@ -8,7 +8,7 @@ import ViewDeleteForm from "@/components/view/view-delete-form";
 import { verifyAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
-export default async function ViewRecipes() { 
+export default async function ViewRecipes() {
   const result = await verifyAuth();
   if (!result.user) return redirect("/");
 
@@ -29,18 +29,23 @@ export default async function ViewRecipes() {
                 priority
               />
               <div>
-                <div>
-                  <h2>{recipe.title}</h2>
-                  <p>{recipe.description}</p>
-                </div>
+                <h2>{recipe.title}</h2>
+                <p>{recipe.description}</p>
               </div>
             </div>
 
             <div id={classes.actions}>
               <ViewDeleteForm id={recipe.id} />
               <div>
-                <Link id={classes["edit-btn"]} href={`/my-recipes/edit/${recipe.id}`}>Edit Recipe</Link>
-                <Link id={classes["view-tag"]} href={`/dish/${recipe.id}`}>View Details</Link>
+                <Link
+                  id={classes["edit-btn"]}
+                  href={`/my-recipes/edit/${recipe.id}`}
+                >
+                  Edit <span>Recipe</span>
+                </Link>
+                <Link id={classes["view-btn"]} href={`/dish/${recipe.id}`}>
+                  View <span>Details</span>
+                </Link>
               </div>
             </div>
           </li>

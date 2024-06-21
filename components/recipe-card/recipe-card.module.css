@@ -8,6 +8,10 @@
   background-color: #24201c;
 }
 
+#recipe-card > img {
+  width: 100%;
+}
+
 #recipe-card > a {
   background-color: #e3430e;
   padding: 0.5rem 1.5rem;
@@ -17,4 +21,10 @@
 
 #recipe-card > a:hover {
   background-color: #f94d03;
+}
+
+@media only screen and (max-width: 480px) {
+  #recipe-card {
+    max-width: 90vw;
+  }
 }
